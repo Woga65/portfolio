@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
 
   /* scroll to the top of the active section and let the body fade in */
   setTimeout(() => {
-    document.querySelector(window.location.hash || '#top').scrollIntoView();
+    document.querySelector(window.location.hash || '#top').scrollIntoView(true);
     body.style = 'opacity: 1; transition: opacity 350ms ease-in-out; -webkit-transition: opacity 350ms ease-in-out;';
   });
 
