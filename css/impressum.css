@@ -1,0 +1,78 @@
+.main {
+  background-color: var(--secondary-bgr);
+}
+
+.impressum {
+  padding-top: calc(var(--font-size) * var(--header-height));
+}
+
+.base-margin {
+  margin-left: calc(var(--font-size) * .5);
+  margin-right: calc(var(--font-size) * .5);
+}
+
+.top-margin {
+  margin-top: calc(var(--font-size) * 2);
+}
+
+.bottom-margin {
+  margin-bottom: calc(var(--font-size) * 2);
+}
+
+.container {
+  width: 100%;
+}
+
+header {
+  border-bottom: 1px solid var(--primary-accent);
+}
+
+strong {
+  font-weight: bold;
+}
+
+li p,
+li span {
+  line-height: calc(var(--font-size) * 1.5);
+  font-size: calc(var(--font-size) * 1.125);
+  font-family: var(--primary-font);
+}
+
+.heading p {
+  font-weight: bold;
+  margin: calc(var(--font-size) * 1) calc(var(--font-size) * 0) calc(var(--font-size) * 0.5) calc(var(--font-size) * 0);
+  font-size: calc(var(--font-size) * 1.5);
+}
+
+.sub-heading {
+  font-weight: bold;
+  margin: calc(var(--font-size) * 0.5) calc(var(--font-size) * 0);
+}
+
+li[value] {
+  margin: 0 calc(var(--font-size) * 1);
+}
+
+.recital {
+  margin-top: calc(var(--font-size) * 1);
+}
+
+.recital li {
+  list-style: disc;
+  margin-bottom: calc(var(--font-size) * 1);
+}
+
+
+@media only screen and (min-width: 332px) {
+  .base-margin {
+    margin-left: calc(var(--font-size) * 1);
+    margin-right: calc(var(--font-size) * 1);
+  }
+}
+
+@media only screen and (min-width: 675px) {
+  .base-margin {
+    margin-left: calc(var(--font-size) * 2);
+    margin-right: calc(var(--font-size) * 2);
+  }
+}
