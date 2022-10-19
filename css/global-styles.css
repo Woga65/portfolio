@@ -79,7 +79,7 @@ button {
   font-family: var(--secondary-font);
 }
 
-label, input, textarea {
+label, input, textarea, .hint {
   font-family: var(--primary-font);
 }
 

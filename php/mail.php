@@ -30,7 +30,7 @@ switch($_SERVER['REQUEST_METHOD']){
         }
 
 //Your E-mail address goes here
-        $recipient = 'your@email.xyz';
+        $recipient = 'kontakt@wolfgang-siebert.de';
         $subject = "new message from: $name";
         $headers = "From: $name <$email>";
 
@@ -42,7 +42,7 @@ switch($_SERVER['REQUEST_METHOD']){
           echo '<br><i><h3 align="center">Your message has been sent.</h3></i><br>';
         }
 //Your website url goes here
-        echo '<p align="center"><a href="https://Your-Website.xyz/index.html"><br>Please click here, to return to the start page.</a></p>';
+        echo '<p align="center"><a href="https://wolfgang-siebert.de/index.html"><br>Please click here, to return to the start page.</a></p>';
         break;
     default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);

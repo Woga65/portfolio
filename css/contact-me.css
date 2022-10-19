@@ -121,7 +121,7 @@
 }
 
 .contact-form .submit-button:focus {
-  box-shadow: 0px 0px 0px 1px;
+  box-shadow: 0px 0px 0px 2px;
   border-radius: calc(var(--font-size) * .5);
 }
 
