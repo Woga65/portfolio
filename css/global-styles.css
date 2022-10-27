@@ -20,6 +20,7 @@
     --primary-color: #f0f0f0;
     --primary-color-opaque: #f0f0f0ff;
     --primary-color-translucent: #f0f0f080;
+    --primary-color-less-translucent: #f0f0f0a0;
     --primary-color-invisible: #f0f0f000;
     --secondary-color: #ffffff;
     --primary-accent: #fa2759;

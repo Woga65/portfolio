@@ -157,6 +157,24 @@ footer a:hover {
   }
 }
 
+@media only screen and (max-width: 428px) and (min-height: 760px) {
+  .arrow {
+    display: flex;
+  }
+  .arrow img {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
+  .arrow {
+    display: flex;
+  }
+  .arrow img {
+    width: 50px;
+  }
+}
+
 @media only screen and (min-width: 332px) {
   .base-margin {
     margin-left: calc(var(--font-size) * 1);

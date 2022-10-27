@@ -7,7 +7,7 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-bottom: calc(var(--font-size) * 2);
 }
@@ -62,21 +62,24 @@
 
 .hover-title {
   font-size: calc(var(--font-size) * 1.25);
-  text-shadow: 1px 1px 2px #000e;
   text-decoration: none;
   color: var(--primary-accent);
   z-index: 1;
   font-weight: 700;
   margin-bottom: 4px;
+  text-shadow: 1px 1px 2px #000e;
+  /*padding-bottom: 4px;*/
+  /*background-color: var(--primary-color-less-translucent);*/
 }
 
 .hover-text {
   font-size: calc(var(--font-size) * 1.0625);
   line-height: calc(var(--font-size) * 1.25);
-  background-color: var(--primary-color-translucent);
   border-radius: 2px;
   z-index: 1;
   margin-bottom: 4px;
+  padding-bottom: 4px;
+  /*background-color: var(--primary-color-less-translucent);*/
 }
 
 .overlay {
@@ -87,7 +90,7 @@
   right: 0;
   position: absolute;
   background-color: var(--primary-color-invisible);
-  /*opacity: 0.0;  backdrop-filter does not work when opacity is used - at least in firefox*/
+  /*opacity: 0.0;  backdrop-filter does not work when opacity other than 0 or 1 is used - at least in firefox*/
 }
 
 .inner-projects-container {
@@ -129,7 +132,7 @@
   -ms-transform: translate(-50%,-50%);
   transition: 250ms ease-in-out;
   -webkit-transition: 250ms ease-in-out;
-
+  background-color: var(--primary-color-translucent);
 }
 
 .project:hover .middle,
@@ -150,6 +153,7 @@
   transition: 250ms ease-in-out;
   -webkit-transition: 250ms ease-in-out;
   cursor: pointer;
+  /*opacity: 0.5;   backdrop-filter does not work when opacity other than 0 or 1 is used - at least in firefox*/
 }
 
 .project:hover .img-buttons,
