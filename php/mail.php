@@ -16,17 +16,21 @@ switch($_SERVER['REQUEST_METHOD']){
 
         $json = file_get_contents('php://input');
         $params = json_decode($json);
+        $submit_btn = 0;
 
         if ($params) {  //json data
+          $json_data = 1;
           $antispam = property_exists($params, 'bcc') ? $params->bcc : 'xyz';
           $email = $params->email;
           $name = $params->name;
           $message = $params->message;
         } else {        //form data as sent by <form action="mail.php" method="post">
+          $json_data = 0;
           $antispam = isset($_POST['bcc']) ? $_POST['bcc'] : 'xyz';
           $email = isset($_POST['email']) ? $_POST['email'] : '';
           $name = isset($_POST['name']) ? $_POST['name'] : '';
           $message = isset($_POST['message']) ? $_POST['message'] : '';
+          $submit_btn = (isset($_POST['submit-button']) || isset($_POST['prevent-enter-submit'])) ? 1 : 0;
         }
 
 //Your E-mail address goes here
@@ -35,9 +39,9 @@ switch($_SERVER['REQUEST_METHOD']){
         $headers = "From: $name <$email>";
 
 //E-mail is only sent if field bcc exists and is empty
-        if ($antispam == '') {      // && $country == 'DE') {
+        if ($antispam == '') {      // && ($json_data == 1 || $submit_btn == 1)   // && $country == 'DE') {
           echo '<br><i><h3 align="center">Thank you. Your message has been successfully sent.</h3></i><br>';
-          mail($recipient, $subject, "$name\r\n$email\r\n \r\n$message", $headers);
+          mail($recipient, $subject, "json:$json_data\r\nbtn:$submit_btn\r\n \r\n$name\r\n$email\r\n \r\n$message", $headers);
         } else {
           echo '<br><i><h3 align="center">Your message has been sent.</h3></i><br>';
         }
