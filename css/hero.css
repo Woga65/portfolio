@@ -166,7 +166,7 @@ footer a:hover {
   }
 }
 
-@media only screen and (max-width: 768px) and (min-height: 1024px) {
+@media only screen and (max-width: 768px) and (min-height: 921px) {
   .arrow {
     display: flex;
   }
