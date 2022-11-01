@@ -76,6 +76,7 @@
     </div>
   </section>
 
+  <div class="nav-top"></div>
   <div class="nav-border"></div>
 
   <section id="skills" class="skills">
@@ -121,27 +122,27 @@
             </div>
             <div class="icon">
                 <div class="icon-img">
-                    <img src="assets/skills-icons/ux-design.png">
-                </div>
-                <p>Design <br> Thinking</p>
-            </div>
-            <div class="icon">
-                <div class="icon-img">
                     <img src="assets/skills-icons/icons8-rest-api-80_2.png">
                 </div>
                 <p>Rest API</p>
             </div>
             <div class="icon">
                 <div class="icon-img">
-                    <img src="assets/skills-icons/icons8-test-lab-96_2.png">
+                    <img src="assets/skills-icons/ux-design.png">
                 </div>
-                <p>Test <br> automation</p>
+                <p>User<br>experience</p>
             </div>
             <div class="icon">
                 <div class="icon-img">
                     <img src="assets/skills-icons/icons8-database-52_2.png">
                 </div>
                 <p>Database</p>
+            </div>
+            <div class="icon">
+                <div class="icon-img">
+                    <img src="assets/skills-icons/admin-icon.png">
+                </div>
+                <p>SysAdmin</p>
             </div>
             <div class="icon">
                 <div class="icon-img">
@@ -153,7 +154,7 @@
                 <div class="icon-img">
                     <img src="assets/skills-icons/c-programming-language_s.png">
                 </div>
-                <p>Embedded C <br> Hobbyist</p>
+                <p>Embedded C <br> hobbyist</p>
             </div>
         </div>
 
@@ -309,21 +310,21 @@
                     <img src="assets/img/heart-line.png" class="icon">
                 </div>
                 <p class="step-heading">I FELL IN LOVE</p>
-                <p>again when I built the website for my dance studio. Realizing how badly I missed programming, I began to learn embedded C and started writing firmware for model aircraft.</p>
+                <p>again when I built a website for my dance studio. Realizing how badly I missed programming, I began to learn embedded C and started writing firmware for model aircraft.</p>
             </div>
             <div class="step">
                 <div class="icon-container">
                     <img src="assets/img/search-line.png" class="icon">
                 </div>
-                <p class="step-heading">I SEARCHED</p>
-                <p>for a way to bring my skills to a professional level. When I could not operate my dance studio due to the Covid pandemic, I took the opportunity and enrolled in Developer Academy, where I could work on many projects and gain a lot of experience.</p>
+                <p class="step-heading">I WAS LOOKING</p>
+                <p>for an effective way to enhance my professional skills and opted for a project-based method of learning. I relied on a team of experienced web developers who helped me broaden my knowledge and make great advances.</p>
             </div>
             <div class="step">
                 <div class="icon-container">
                     <img src="assets/img/takeoff-line.png" class="icon">
                 </div>
                 <p class="step-heading">MY GOALS</p>
-                <p>are to make the web more efficient and user-friendly so that everyone has the opportunity to find what they are looking for and to connect to other people around the globe. To meet future challenges I am practicing backend skills with Developer Academy.</p>
+                <p>are to prove my experience and know-how in practice, and to deepen my knowledge. To meet future challenges, I am practicing backend skills with Developer Academy.</p>
             </div>
         </div>
 
@@ -334,11 +335,11 @@
       <div class="contact-container base-margin top-margin bottom-margin">
           <div class="contact-heading">
               <h2>Contact me.</h2>
-              <p>Get in touch via the form below, or emailing <a class="email-link" href=" mailto:your@email.xyz">your@email.xyz</a></p>
+              <p>Get in touch via the form below, or emailing <a class="email-link" href="mailto:kontakt@wolfgang-siebert.de">kontakt@wolfgang-siebert.de</a></p>
           </div>
 
           <div class="form-container container">
-              <form id="contact-form" class="contact-form" method="post" action="https://wolfgang-siebert.de/php/mail.php"> <!-- action="http://127.0.0.1/mail.php"> -->
+              <form id="contact-form" class="contact-form" method="post" action="php/mail.php"> <!-- action="http://127.0.0.1/mail.php"> -->
 
                   <div class="field-container container">
                       <div>
@@ -401,7 +402,7 @@
                   </div>
 
                   <div class="submit-container container">
-                      <button name="prevent-enter-submit" type="submit" style="display: none;" onclick="return false;">
+                      <button name="prevent-enter-submit" id="prevent-enter-submit" type="submit" style="display: none;" onclick="return false;">
                       <button name="submit-button" id="submit-button" class="submit-button" type="submit">
                           Send
                       </button>
@@ -425,5 +426,6 @@
             <a href="impressum.html">Impressum + Datenschutzerklärung - Legal Notice</a>
         </div>
     </footer>
+
   </body>
 </html>

@@ -1,9 +1,15 @@
 <?php
 
 //might be needed to restrict messages to a certain country
-//$ip_addr = $_SERVER['REMOTE_ADDR'];
-//$geoplugin = unserialize( file_get_contents('http://www.geoplugin.net/php.gp?ip=' . $ip_addr) );
-//$country = $ip_addr == '127.0.0.1' ? 'DE' : $geoplugin['geoplugin_countryCode'];
+$ip_addr = $_SERVER['REMOTE_ADDR'];
+$result = @file_get_contents('http://www.geoplugin.net/php.gp?ip=' . $ip_addr);
+if ($result === false) {
+  $country = 'DE';
+} else {
+  $geoplugin = unserialize($result);
+  $country = $geoplugin['geoplugin_countryCode'];
+}
+$country = $ip_addr == '127.0.0.1' ? 'DE' : $country;
 
 switch($_SERVER['REQUEST_METHOD']){
     case("OPTIONS"): //Allow preflighting to take place.
@@ -39,9 +45,9 @@ switch($_SERVER['REQUEST_METHOD']){
         $headers = "From: $name <$email>";
 
 //E-mail is only sent if field bcc exists and is empty
-        if ($antispam == '') {      // && ($json_data == 1 || $submit_btn == 1)   // && $country == 'DE') {
+        if ($antispam == '' && ($json_data == 1 || $submit_btn == 1) && ($country == 'DE' || $country == 'AT' || $country == 'CH')) {
           echo '<br><i><h3 align="center">Thank you. Your message has been successfully sent.</h3></i><br>';
-          mail($recipient, $subject, "json:$json_data\r\nbtn:$submit_btn\r\n \r\n$name\r\n$email\r\n \r\n$message", $headers);
+          mail($recipient, $subject, "json:$json_data\r\ncountry:$country\r\n \r\n$name\r\n$email\r\n \r\n$message", $headers);
         } else {
           echo '<br><i><h3 align="center">Your message has been sent.</h3></i><br>';
         }
