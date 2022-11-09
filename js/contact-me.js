@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-  const endPoint = 'php/mail.php';
+  const endPoint = 'https://wolfgang-siebert.de/php/mail.php';
   const myForm = document.getElementById('contact-form');
   const submit = document.querySelector('.contact-form .submit-button');
   const dataSent = document.querySelector('.contact .form-data-sent');
