@@ -24,13 +24,11 @@ A PHP enabled web server is needed for the mail endpoint.
 
 Change the lines 
 
-`const endPoint = 'https://your-website.xyz/php/mail.php';` in the file `js/contact-me.js`,
-
 `$recipient = 'contact@your-mail.xyz';` in the file `php/mail.php`,
 
 `echo '<p align="center"><a href="https://your-website.xyz/index.html"><br>Please click ...` in the file `php/mail.php`,
 
-`<form id="contact-form" class="contact-form" method="post" action="https://your-website.xyz/php/mail.php"> ` in the file `index.html`,
+`<p>Get in touch via the form below, or emailing <a class="email-link" href="mailto:contact@your-mail.xyz">contact@your-mail.xyz</a></p> ` in the file `index.html`,
 
 
 according to your needs.
