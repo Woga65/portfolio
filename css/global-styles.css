@@ -15,6 +15,7 @@
     --header-height: 5.375;
     --scroll-margin: 5.375;
     --primary-bgr: #1a1a1a;
+    --primary-bgr-translucent: #1a1a1a80;
     --secondary-bgr: #000000;
     --secondary-bgr-translucent: #000000f0;
     --primary-color: #f0f0f0;
@@ -25,6 +26,7 @@
     --secondary-color: #ffffff;
     --primary-accent: #fa2759;
     --secondary-accent: #2dfcd8;
+    --secondary-accent-translucent: #2dfcd8a0;
     --secondary-accent-invisible: #2dfcd800;
 }
 

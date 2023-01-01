@@ -118,11 +118,13 @@
   outline-width: 1px;
   outline-color: var(--secondary-accent);
   border-radius: calc(var(--font-size) * .5);
+  background-color: var(--primary-bgr-translucent);
 }
 
 .contact-form .submit-button:focus {
   box-shadow: 0px 0px 0px 2px;
   border-radius: calc(var(--font-size) * .5);
+  background-color: var(--primary-bgr-translucent);
 }
 
 .contact-form .bcc {
