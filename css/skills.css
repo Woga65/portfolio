@@ -24,13 +24,13 @@
         background-color: var(--primary-color);;
         color: var(--primary-bgr);
         height: 50px;
-        width: 70px;
+        width: 75px;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 5px 5px;
         text-align: center;
-        font-size: .7rem;
+        font-size: calc(var(--font-size) * .7);
         line-height: 1.1;
         padding-top: .3rem;
     }
@@ -71,7 +71,7 @@
         height: 70px;
         width: 100px;
         border-radius: 5px 5px;
-        font-size: calc(var(--font-size) * 1);
+        font-size: calc(var(--font-size) * .95);
         padding-top: .5rem;
     }
     .icon-img {

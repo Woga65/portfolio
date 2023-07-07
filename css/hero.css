@@ -290,3 +290,9 @@ footer a:hover {
     margin: calc(var(--font-size) * 9) 0;
   }
 }
+
+@media only screen and (min-width: 1440px) and (min-height: 895px) {
+  .arrow {
+    display: none;
+  }
+}
