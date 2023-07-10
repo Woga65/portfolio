@@ -160,6 +160,7 @@
 .project:focus .img-buttons,
 .project:active .img-buttons {
   pointer-events: auto;
+  display: flex;
 }
 
 .text {
@@ -183,7 +184,7 @@
 
 .img-buttons {
   pointer-events: none;
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   align-items: center;
   margin-top: auto;
