@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>INAV Project Details</title>
+      <link rel='stylesheet' type='text/css' media='screen' href='css/fonts.css'>
+      <link rel='stylesheet' type='text/css' media='screen' href='css/inav_project.css'>
+</head>
+<body>
+    <div class="hero">
+        <h1>Helicopter Firmware Demo</h1>
+        <a href="#intro">
+            <img src="assets/img/angle-double-down-solid.png">
+            <p>Project Details</p>
+        </a>
+        <video class="video-bg" autoplay muted loop playsinline>
+            <source src="assets/video/portfolio_uav.webm" type="video/webm">
+            <source src="assets/video/portfolio_uav_s_no_audio.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <section class="intro" id="intro">
+        <h2>INAV for HELICOPTERS</h2>
+        <div class="row">
+            <div class="col">
+                <h3>Objective</h3>
+                <p>
+                    Currently there are just few popular open source flight control softwares that
+                    support helicopters. The only one which offers navigation capabilities is ArduPilot,
+                    which covers all platforms and use cases one could imagine and therfore has a steep
+                    learning curve and somewhat strict hardware requirements.
+                </p>
+                <p>
+                    The goal of this project is, to add support for the platform types regular helicopter,
+                    twin-rotor helicopter and helicopter-like multirotor to the popular open source flight
+                    control software INAV, which is relatvely easy to use and setup. Also, INAV can run on
+                    a wide variety of easily and inexpensively available flight controller hardware.
+                </p>
+            </div>
+            <div class="col">
+                <h3>Challenges + Solutions</h3>
+                <p>
+                    Since INAV did not offer support for constant speed / variable pitch propellers before,
+                    which are controlled similar to the rotors of a helicopter, I needed to implement the
+                    logic myself.
+                </p>
+                <p>
+                    This lead among other challenges to the need to implement a dedicated
+                    altitude controller for helicopters, a PID controller for an RPM governor, a soft spool-up
+                    and mapping capabilities for additional RC channels.
+                </p>
+                <p>
+                    The integral handling needed to be reworked to prevent the I-term from winding
+                    up on the ground and additional logic had to be added to the failsafe procedures. 
+                </p>
+                <p>
+                    Also, I reworked parts of the INAV Configurator to account for a bunch of new or changed
+                    configurable parameters without changing the well established user experience too much.
+                </p>
+            </div>
+            <div class="col">
+                <h3>Outlook</h3>
+                <p>
+                    Currently, INAV for helicopters is based on INAV 6.1.1. As soon as INAV 7.1 is out, I
+                    would like to port it over to the newer code base. After this is done, I am thinking about
+                    either contributing my code to the INAV project or making my fork an independent project.
+                </p>
+                <p>
+                    The next feature I want to add is a pirouette compensation for regular helicopters. 
+                    Dedicated RPM governors for each main rotor would be beneficial too, if there is more than one.
+                </p>
+                <p>
+                    Also, there is a lot of cool stuff that can be implemented like automated auto-rotation,
+                    inverted flight on a switch, ...
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo" id="demo">
+        <h2>CONFIGURATOR DEMO</h2>
+        <div class="row">
+            <div class="col">
+                <video class="configurator-demo" autoplay="" muted="" loop="" playsinline="">
+                    <source src="assets/video/INAV_6.1.1_heli.webm" type="video/webm">
+                    <source src="assets/video/INAV_6.1.1_heli.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="download" id="download">
+        <h2>CODE on GITHUB</h2>
+        <div class="row">
+            <div class="col">
+                <h3>Release</h3>
+                <p><a class="github-link" href="https://github.com/Woga65/inav-configurator/releases/tag/6.1.0-VP-RC1" target="_blank">Linux / Mac / Windows</a></p>
+            </div>
+            <div class="col">
+                <h3>Firmware</h3>
+                <p><a class="github-link" href="https://github.com/Woga65/inav/tree/woga65_6.1.1_vari-pitch" target="_blank">C source on GitHub</a></p>
+            </div>
+            <div class="col">
+                <h3>Configurator</h3>
+                <p><a class="github-link" href="https://github.com/Woga65/inav-configurator/tree/woga65_6.1.0_vari-pitch" target="_blank">JS source on GitHub</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <a href="impressum.html">Impressum + Datenschutzerklärung - Legal Notice</a>
+        </div>
+    </footer>
+</body>
+</html>

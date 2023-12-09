@@ -1,0 +1,220 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-font: 'Roboto', 'Open Sans', sans-serif;
+    --secondary-font: 'Raleway', 'Open Sans', sans-serif;
+    --font-size: 1rem;
+    --primary-color: #fcfcfc;
+    --secondary-color: #f0f0f0;
+    --primary-bgr: #000000;
+    --secondary-bgr: #1a1a1a;
+    --primary-accent: #fa2759;
+    --secondary-accent: #2dfcd8;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+}
+
+button, a {
+    background: none;
+    color: var(--primary-color);
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    font-family: var(--secondary-font);
+}
+
+section h2 {
+    color: var(--secondary-accent);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1920px;
+    min-height: 100vh;
+    background-color: var(--primary-bgr);
+    /*overflow-x: hidden;*/
+}
+
+.hero {
+    font-family: var(--primary-font);
+    gap: 0em;
+    /*background: rgba(0, 0, 100, .1);*/
+    color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-height: 100vh;
+}
+
+.hero h1 {
+    position: absolute;
+    margin-top: 4%;
+    opacity: 0.6;
+    font-size: calc(var(--font-size) * 1.2);
+    text-align: center;
+}
+
+.hero a {
+    margin-bottom: 3%;
+    text-decoration: none;
+    color:var(--secondary-color);
+    transition: 250ms ease-in-out;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+}
+
+.hero a:hover img {
+    text-decoration: underline;
+    transform: translate(0, 6%);
+    opacity: 0.8;
+}
+
+
+.hero a:hover p {
+    transform: translate(0, -50%);
+    opacity: 0.8;
+}
+
+.hero a img {
+    width: 44px;
+    margin-bottom: 10px;
+}
+
+.hero a p {
+    margin: 0;
+    font-size: calc(var(--font-size) * 0.8);
+    opacity: 0;
+}
+
+.hero a img,
+.hero a p   {
+    transition: 250ms ease-in-out;
+}
+
+.video-bg {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    display: block;
+    filter: saturate(85%);
+    -webkit-filter: saturate(85%);
+}
+
+.intro, .demo, .download {
+    padding: 3.5% 7% 3.5% 7%;
+    text-align: center;
+    background-color: var(--secondary-bgr);
+    color: var(--secondary-color);
+    font-family: var(--primary-font);
+}
+
+.demo {
+    background-color: var(--primary-bgr);
+}
+
+.download {
+    padding-bottom: 7%;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    column-gap: 7%;
+}
+
+.col {
+    flex-basis: 100%;
+    padding: unset;
+}
+
+.configurator-demo {
+    width: 100%;
+    margin-bottom: 1.17rem;
+    margin-top: 1.17rem;
+}
+
+.github-link {
+    color: var(--secondary-accent);
+    cursor: pointer;
+    transition: opacity 125ms ease-in-out;
+    -webkit-transition: opacity 125ms ease-in-out;
+}
+
+.github-link:hover,
+.github-link:focus,
+.github-link:active {
+    opacity: .7;
+    transition: opacity 125ms ease-in-out;
+    -webkit-transition: opacity 125ms ease-in-out;
+    font-style: italic;
+}
+
+.footer {
+    height: calc(var(--font-size) * 3.75);
+    background-color: var(--primary-color);
+    color: var(--secondary-bgr);
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+}
+
+.footer a {
+    color: inherit;
+}
+
+
+@media only screen and (min-width: 360px) {
+    .hero h1 {
+        font-size: calc(var(--font-size) * 1.5);
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .hero h1 {
+        font-size: calc(var(--font-size) * 2);
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-height: 1025px) and (min-aspect-ratio: 16/11) {
+    .hero a {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .hero h1 {
+        font-size: calc(var(--font-size) * 3);
+    }
+
+    .intro, .demo, .download {
+        text-align: left;
+    }
+
+    .row {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .hero h1 {
+        font-size: calc(var(--font-size) * 4);
+    }
+}

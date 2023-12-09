@@ -236,12 +236,12 @@ footer a:hover {
     width: unset;
     position: relative;
     object-fit: cover;
-    object-position: 28vw;
+    /*object-position: 11vw;*/
 
   }
 }
 
-@media only screen and (min-width: 928px) {
+@media only screen and (min-width: 964px) {
   .hero-image {
     position: unset;
     overflow-x: unset;
