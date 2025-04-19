@@ -12,6 +12,7 @@
     --secondary-bgr: #1a1a1a;
     --primary-accent: #fa2759;
     --secondary-accent: #2dfcd8;
+    --max-viewport-width: 1920px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -41,8 +42,8 @@ html {
 
 body {
     margin: 0 auto;
-    max-width: 1920px;
-    min-height: 100vh;
+    max-width: var(--max-viewport-width);
+    height: 100vh;
     background-color: var(--primary-bgr);
     /*overflow-x: hidden;*/
 }
@@ -50,15 +51,15 @@ body {
 .hero {
     font-family: var(--primary-font);
     gap: 0em;
-    /*background: rgba(0, 0, 100, .1);*/
     color: var(--secondary-color);
-    position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    max-height: 100vh;
+    height: 100%;
+    /*position: relative;*/
+    /*background: rgba(0, 0, 100, .1);*/
 }
 
 .hero h1 {
@@ -70,15 +71,13 @@ body {
 }
 
 .hero a {
-    margin-bottom: 3%;
     text-decoration: none;
     color:var(--secondary-color);
     transition: 250ms ease-in-out;
-    position: absolute;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    bottom: 0;
+    margin: auto auto clamp(2rem, 5vh, 4rem) auto;
 }
 
 .hero a:hover img {
@@ -110,12 +109,15 @@ body {
 }
 
 .video-bg {
-    position: relative;
+    position: fixed;
     z-index: -1;
     width: 100%;
+    height: 100%;
     display: block;
+    object-fit: cover;
     filter: saturate(85%);
     -webkit-filter: saturate(85%);
+    max-width: var(--max-viewport-width);
 }
 
 .intro, .demo, .download {
