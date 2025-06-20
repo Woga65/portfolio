@@ -18,6 +18,10 @@
   color: var(--secondary-accent);
 }
 
+.contact-heading .email-link {
+  text-decoration: underline;
+}
+
 .contact-heading a:hover {
   opacity: .7;
   transition: opacity 125ms ease-in-out;
@@ -85,7 +89,7 @@
     color: red;
     font-size: calc(var(--font-size) * .8);
     left: calc(var(--font-size) * .6);
-    width: fit-content;
+    width: auto;
     background: linear-gradient(180deg, var(--secondary-bgr), var(--primary-bgr));
     padding-right: calc(var(--font-size) * .2);
     display: none;
